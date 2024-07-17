@@ -28,7 +28,7 @@ body
   grid-template-areas:
     "header";
   background-size: var(--body-background-size);
-  background-image: url('../images/cover.jpeg');
+  background-image: var(--cover-file);
   background-attachment: fixed;
   background-position-x: center;
   background-position-y: top;
