@@ -34,20 +34,6 @@ body
   background-position-y: top;
 }
 
-#banner
-{
-  display: grid;
-  grid-template-columns: [scaffold-begin] auto var(--vertical-hem)
-    [shaft-begin] minmax(min-content, var(--max-width)) [shaft-end]
-    var(--vertical-hem) auto [scaffold-end];
-}
-
-#signboard
-{
-  grid-column-start: shaft-begin;
-  grid-column-end: shaft-end;
-}
-
 header
 {
   grid-area: header;
@@ -58,16 +44,20 @@ header
 
 #banner
 {
+  display: grid;
   grid-row-start: banner-begin;
   grid-row-end: banner-end;
-  background-color: var(--banner-background-color);
-}
-
-#signboard
-{
-  display: grid;
   grid-template-rows: var(--site-name-hem) [logo-begin site-name-begin] var(--logo-size) [logo-end site-name-end];
-  grid-template-columns: [logo-begin] var(--logo-size) [logo-end] var(--site-name-hem) [site-name-begin] max-content [site-name-end];
+  grid-template-columns: [scaffold-begin]
+      auto var(--vertical-hem)
+      [shaft-begin
+        logo-begin] var(--logo-size) [logo-end]
+        var(--site-name-hem)
+        [site-name-begin] minmax(min-content, calc(var(--max-width) - var(--logo-size) - var(--site-name-hem))) [site-name-end
+      shaft-end]
+      var(--vertical-hem) auto
+    [scaffold-end];
+  background-color: var(--banner-background-color);
   color: var(--banner-text-color);
 }
 
