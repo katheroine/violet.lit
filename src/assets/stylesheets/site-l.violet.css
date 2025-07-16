@@ -1,0 +1,11 @@
+:root
+{
+  /* layout */
+  --body-background-size: 100%;
+  --header-height: 336px;
+  --banner-height: 168px;
+  --logo-size: 252px;
+  --site-name-hem: 42px;
+  --site-name-font-size: 80px;
+  --site-description-font-size: 26px;
+}
