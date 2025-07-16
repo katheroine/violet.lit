@@ -19,7 +19,7 @@ body
   grid-template-areas:
     "header";
   background-size: var(--body-background-size);
-  background-image: var(--cover-file);
+  background-image: var(--cover-file-path);
   background-attachment: fixed;
   background-position-x: center;
   background-position-y: top;
@@ -39,7 +39,7 @@ header
   display: grid;
   grid-row-start: banner-begin;
   grid-row-end: banner-end;
-  grid-template-rows: var(--site-name-hem) [logo-begin site-name-begin] var(--logo-size) [logo-end site-name-end];
+  grid-template-rows: var(--site-name-hem) [logo-begin site-name-begin] var(--logo-size) [site-name-end logo-end];
   grid-template-columns: [scaffold-begin]
       auto var(--vertical-hem)
       [shaft-begin
