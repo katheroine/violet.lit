@@ -3,15 +3,6 @@
   /* layout */
   --max-width: 1400px;
   --vertical-hem: 5%;
-  --width: 90%; /* 100 - 2*5 */
-
-  /* font */
-  --font-family: liberation-sans-regular, 'Verdana', sans-serif;
-
-  /* details */
-  --controls-opacity: 70%;
-
-  --contact-info-slot-width: 500px;
 }
 
 *
@@ -32,6 +23,7 @@ body
   background-attachment: fixed;
   background-position-x: center;
   background-position-y: top;
+  font-family: var(--font-family);
 }
 
 header
