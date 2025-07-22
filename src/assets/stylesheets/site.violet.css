@@ -4,6 +4,8 @@
   --max-width: 1400px;
   --vertical-hem: 5%;
 
+  --dashboard-height: var(--controls-height);
+
   /* details */
   --controls-opacity: 70%;
 }
@@ -18,7 +20,7 @@ body
 {
   display: grid;
   grid-template-rows:
-    [header-begin] var(--header-height) [header-end];
+    [header-begin] calc(var(--header-height) + var(--dashboard-height)) [header-end];
   grid-template-areas:
     "header";
   background-size: var(--body-background-size);
@@ -36,13 +38,16 @@ header
   grid-template-rows:
     [banner-begin] var(--banner-height) [banner-end
     cover-begin] calc(var(--header-height) - var(--banner-height)) [cover-end
-    dashboard-begin];
+    dashboard-begin] var(--dashboard-height) [dashboard-end];
+  grid-template-areas:
+    "banner"
+    "cover"
+    "dashboard";
 }
 
 #banner
 {
-  grid-row-start: banner-begin;
-  grid-row-end: banner-end;
+  grid-area: banner;
   display: grid;
   grid-template-rows: var(--site-name-hem)
     [logo-begin site-name-begin] var(--logo-size) [site-name-end];
@@ -55,16 +60,21 @@ header
       shaft-end]
       var(--vertical-hem) auto
     [scaffold-end];
+  grid-template-areas:
+    ". . .    . .         . ."
+    ". . logo . site-name . .";
   background-color: var(--banner-background-color);
   color: var(--banner-text-color);
 }
 
+#cover
+{
+  grid-area: cover;
+}
+
 #logo
 {
-  grid-row-start: logo-begin;
-  grid-row-end: logo-end;
-  grid-column-start: logo-begin;
-  grid-column-end: logo-end;
+  grid-area: logo;
 }
 
 #logo img
@@ -74,10 +84,7 @@ header
 
 #site-name
 {
-  grid-row-start: site-name-begin;
-  grid-row-end: site-name-end;
-  grid-column-start: site-name-begin;
-  grid-column-end: site-name-end;
+  grid-area: site-name;
   font-size: var(--site-name-font-size);
 }
 
@@ -88,10 +95,17 @@ header
 
 #dashboard
 {
-  grid-row-start: dashboard-begin;
+  grid-area: dashboard;
   display: grid;
   grid-template-rows:
     [controls-begin] var(--controls-height) [controls-end dashboard-end];
+}
+
+#dashboard.detached
+{
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 #dial
@@ -150,6 +164,11 @@ nav
   background-size: var(--menu-button-icon-size);
   background-repeat: no-repeat;
   content: "";
+}
+
+.detached #dial .menu-button#go-up-link
+{
+  display: flex;
 }
 
 #dial .menu-button.icon .content
