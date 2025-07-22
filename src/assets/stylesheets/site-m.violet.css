@@ -8,4 +8,18 @@
   --site-name-hem: 4vw;
   --site-name-font-size: 6vw;
   --site-description-font-size: 2vw;
+  --body-background-size: 115%;
+
+  --controls-height: 46px;
+
+  --info-horizontal-hem: 30px;
+
+  /* font */
+  font-size: 18px;
+
+  /* details */
+  --menu-button-minor-hem: 10px;
+  --menu-button-major-hem: 0;
+  --menu-button-font-size: 105%;
+  --menu-button-icon-size: 26px;
 }

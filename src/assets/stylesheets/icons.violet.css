@@ -1,0 +1,24 @@
+#dial .menu-button#increase-font-trigger:before
+{
+  background-image: url('../images/icons.violet/a_plus.svg');
+}
+
+#dial .menu-button#decrease-font-trigger:before
+{
+  background-image: url('../images/icons.violet/a_minus.svg');
+}
+
+#dial .menu-button#toggle-contrast-trigger:before
+{
+  background-image: url('../images/icons.violet/contrast.svg');
+}
+
+#dial .menu-button#reset-accessibility-trigger:before
+{
+  background-image: url('../images/icons.violet/reset.svg');
+}
+
+#dial .menu-button#go-up-link:before
+{
+  background-image: url('../images/icons.violet/arrow_up.svg');
+}
