@@ -1,0 +1,27 @@
+/* contrast */
+
+.contrast header
+{
+  background-color: var(--contrast-header-background-color);
+  background-image: none;
+}
+
+.contrast #banner
+{
+  background-color: var(--contrast-banner-background-color);
+  color: var(--contrast-banner-text-color);
+}
+
+.contrast #dial,
+.contrast .detached #dial
+{
+  background-color: var(--contrast-dial-background-color);
+  opacity: 100%;
+}
+
+@media only screen and (min-width: 1024px) {
+  .contrast #dial .menu-button:hover
+  {
+    background-color: var(--contrast-controls-backlight-color);
+  }
+}
