@@ -129,11 +129,6 @@ header
   justify-content: flex-end;
 }
 
-nav
-{
-  background-color: var(--guideboard-background-color);
-}
-
 #dial .menu-button
 {
   display: flex;
@@ -186,34 +181,4 @@ nav
 {
   margin-left: 0;
   margin-right: var(--menu-button-minor-hem);
-}
-
-#dial .menu-button#increase-font-trigger:before
-{
-  background-image: url('../images/icons.violet/a_plus.svg');
-}
-
-#dial .menu-button#decrease-font-trigger:before
-{
-  background-image: url('../images/icons.violet/a_minus.svg');
-}
-
-#dial .menu-button#toggle-contrast-trigger:before
-{
-  background-image: url('../images/icons.violet/contrast.svg');
-}
-
-#dial .menu-button#reset-accessibility-trigger:before
-{
-  background-image: url('../images/icons.violet/reset.svg');
-}
-
-#dial .menu-button#go-up-link:before
-{
-  background-image: url('../images/icons.violet/arrow_up.svg');
-}
-
-#dial .menu-button#guideboard-trigger:before
-{
-  background-image: url('../images/icons.violet/hamburger.svg');
 }
